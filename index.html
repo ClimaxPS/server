@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClimaxPS - Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 30px 0;
+      background-color: #111;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      color: #00ffea;
+      margin: 0;
+    }
+    .status {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #00ff00;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #1b1b1b;
+      padding: 15px;
+    }
+    nav button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      background-color: #00ffea;
+      color: #000;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    nav button:hover {
+      background-color: #00c9ba;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .store-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,234,0.3);
+    }
+    .card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.3em;
+      color: #00ffea;
+    }
+    .card p {
+      margin: 0;
+      font-size: 1em;
+      color: #ffffffb3;
+    }
+    a.button-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #00ffea;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ClimaxPS</h1>
+    <div class="status">Server Online</div>
+  </header>  <nav>
+    <button onclick="scrollToSection('how')">How to Play</button>
+    <button onclick="scrollToSection('store')">Price Role & Assets</button>
+    <button onclick="window.location.href='https://discord.gg/tx54fYyRE6'">Join Discord</button>
+  </nav>  <section id="how">
+    <h2>How to Play</h2>
+    <p><a class="button-link" href="https://www.mediafire.com/file/1cg66594m00kp1n/ClimaxPS.txt/file">Download Host Virtual</a></p>
+    <p><button onclick="copyText('https://gtpshost.com/ClimaxPS.txt')">Copy Host Power Tunnel</button></p>
+    <p><button onclick="copyText('https://climaxps.github.io/ClimaxPSserver/')">Copy Host Surge 5</button></p>
+    <p><button onclick="copyText('91.134.85.13 growtopia1.com,91.134.85.13 growtopia2.com,91.134.85.13 www.growtopia1.com,91.134.85.13 www.growtopia2.com,91.134.85.13 RvLnd.here')">Copy Host Windows</button></p>
+  </section>  <section id="store">
+    <h2>Price Role & Assets</h2>
+    <div class="store-grid">
+      <div class="card">
+        <h3>GOD MAX</h3>
+        <p>Rp 500.000</p>
+      </div>
+      <div class="card">
+        <h3>GOD</h3>
+        <p>Rp 400.000</p>
+      </div>
+      <div class="card">
+        <h3>U MOD</h3>
+        <p>Rp 300.000</p>
+      </div>
+      <div class="card">
+        <h3>S MOD</h3>
+        <p>Rp 200.000</p>
+      </div>
+      <div class="card">
+        <h3>MOD</h3>
+        <p>Rp 100.000</p>
+      </div>
+      <div class="card">
+        <h3>Super VIP</h3>
+        <p>Rp 50.000</p>
+      </div>
+      <div class="card">
+        <h3>VIP</h3>
+        <p>Rp 20.000</p>
+      </div>
+      <div class="card">
+        <h3>Cheat Role Perma</h3>
+        <p>Rp 25.000</p>
+      </div>
+      <div class="card">
+        <h3>DR TITLE</h3>
+        <p>Rp 30.000</p>
+      </div>
+      <div class="card">
+        <h3>GROW4GOD TITLE</h3>
+        <p>Rp 30.000</p>
+      </div>
+      <div class="card">
+        <h3>MENTOR TITLE</h3>
+        <p>Rp 30.000</p>
+      </div>
+      <div class="card">
+        <h3>L TITLE</h3>
+        <p>Rp 40.000</p>
+      </div>
+      <div class="card">
+        <h3>ALL L ITEM</h3>
+        <p>Rp 30.000</p>
+      </div>
+    </div>
+  </section>  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied to clipboard: " + text);
+      });
+    }
+  </script></body>
+</html>
